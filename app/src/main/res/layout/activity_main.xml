@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/body_background"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="16dp"
+    android:orientation="vertical"
+    android:weightSum="12"
+    tools:context=".MainActivity">
+
+    <!-- Layer 1 TOP -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        >
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_left"
+            android:layout_gravity="center"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/layer1_text1"
+            android:lineHeight="32dp"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="32dp"
+            android:paddingTop="4dp"
+            android:layout_weight="2"
+            android:textSize="28sp" />
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_more"
+            android:layout_gravity="end"
+            android:layout_marginLeft="32dp"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+    <!-- Layer 2 ProgreeBar -->
+    <ProgressBar
+        android:id="@+id/progress_horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:max="100"
+        android:progress="60"
+        android:scaleY="2"
+        android:paddingHorizontal="6dp"
+        android:progressTint="#FF9051"
+        android:progressBackgroundTint="#7646FE"
+        />
+    <!-- Layer 3 Question -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer3_back"
+            android:src="@drawable/icon_image"
+            android:translationZ="2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:translationY="20dp"
+            tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/layer3_back"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="110dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/layer3_text1"
+                android:textAlignment="center"
+                android:textColor="#280A82"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Layer 4 Answers -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="4dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer_bg2"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginVertical="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/layer4_text1"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer_bg"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginVertical="5dp"
+            android:translationZ="4dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/layer4_text2"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer_bg2"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginVertical="5dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/layer4_text3"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
