@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Android-Lesson-006</string>
     <!-- Layer1 TOP texts -->
-    <string name="layer1_text1">Question 1</string>
+    <string name="layer1_text1">Questions</string>
     <!-- Layer 3 texts -->
     <string name="layer3_text1">what is\nthis thing?</string>
     <!-- Layer 4 texts -->
@@ -11,8 +11,8 @@
 
     <!-- Screen2 Layer 1 -->
     <string name="screen2_text1">Nice Work</string>
-    <string name="screen2_text2_1">You Earned </string>
-    <string name="screen2_text2_2">80 pts</string>
+    <string name="screen2_text2_1">You Earned</string>
+    <string name="screen2_text2_2"> 80 pts</string>
     <string name="screen2_text3">Next Stage</string>
     <string name="screen2_text4">Play Again</string>
 

@@ -28,6 +28,7 @@
             />
 
         <TextView
+            android:id="@+id/tv_question_id"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -57,53 +58,45 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="8dp"
+        android:layout_marginVertical="12dp"
         android:max="100"
-        android:progress="60"
         android:scaleY="2"
         android:paddingHorizontal="6dp"
         android:progressTint="#FF9051"
         android:progressBackgroundTint="#7646FE"
         />
-    <!-- Layer 3 Question -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <!-- Question Number -->
+    <TextView
+        android:id="@+id/tv_qnumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="4"
-        >
+        android:text="1/4"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:fontFamily="@font/poppins"
+        android:paddingHorizontal="10dp"
+        />
+    <!-- Layer 3 Question -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        android:padding="8dp"
+        android:background="@drawable/layer3_back"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/layer3_back"
-            android:src="@drawable/icon_image"
-            android:translationZ="2dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:translationY="20dp"
-            tools:ignore="MissingConstraints" />
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_question"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="48dp"
-            android:background="@drawable/layer3_back"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="110dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/layer3_text1"
-                android:textAlignment="center"
-                android:textColor="#280A82"
-                android:textSize="32sp" />
-        </LinearLayout>
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/layer3_text1"
+            android:textAlignment="center"
+            android:textColor="#280A82"
+            android:textSize="24sp" />
+    </LinearLayout>
     <!-- Layer 4 Answers -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -114,68 +107,89 @@
         android:layout_marginTop="32dp"
         android:paddingHorizontal="4dp"
         >
-        <LinearLayout
+        <RadioGroup
+            android:id="@+id/rg_answers"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/answer_bg2"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_marginVertical="5dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/layer4_text1"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/answer_bg"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_marginVertical="5dp"
-            android:translationZ="4dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rb_1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/layer4_text2"
-                android:layout_gravity="center"
-                android:textSize="20sp"
-                android:fontFamily="@font/poppins_semibold"
-                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/answer_bg2"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:textColor="#fff"
                 />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/answer_bg2"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_marginVertical="5dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/rb_2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/layer4_text3"
-                android:layout_gravity="center"
-                android:textSize="20sp"
-                android:fontFamily="@font/poppins_semibold"
-                android:textColor="@color/white"
+                android:text="@string/layer4_text2"
+                android:textSize="18sp"
+                android:background="@drawable/answer_bg2"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:textColor="#fff"
+                />
+            <RadioButton
+                android:id="@+id/rb_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/layer4_text2"
+                android:textSize="18sp"
+                android:background="@drawable/answer_bg2"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:textColor="#fff"
                 />
 
-        </LinearLayout>
+        </RadioGroup>
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/a"
+            android:layout_weight="1"
+            android:layout_marginVertical="2dp"
+            android:layout_marginHorizontal="8dp"
+            android:textSize="24sp"
+            android:text="Previous"
+            android:textColor="#fff"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/a"
+            android:layout_weight="1"
+            android:layout_marginVertical="2dp"
+            android:layout_marginHorizontal="8dp"
+            android:textSize="24sp"
+            android:text="Next"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/correct"
+        android:layout_marginVertical="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="0"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        />
 
 
 </LinearLayout>
